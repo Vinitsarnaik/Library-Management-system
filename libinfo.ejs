@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT DETAILS-:</title>
+</head>
+<body>
+    <h1>STUDENT DETAILS-:</h1>
+    <table border="1" width="100%">
+
+        <tr>
+        
+        <th>SID</th>
+        <th>FIRST-NAME</th>
+        <th>LAST-NAME</th>
+        <th>ADDRESS</th>
+        <th>MOBILE NO</th>
+        <th>DATE-BORROWED</th>
+        <th>DATE-DUE</th>
+        <th>Book</th>
+    </tr>
+    
+    <% if(students.length > 0){%>
+
+        <% for (var i = 0;i<students.length;i++){ %>
+
+            <tr>
+                <td><%- students[i].id %></td>
+                <td><%- students[i].firstname %></td>
+                <td><%- students[i].lastname %></td>
+                <td><%- students[i].Address %></td>
+                <td><%- students[i].mobileno %></td>
+                <td><%- students[i].dateborrowed %></td>
+                <td><%- students[i].datedue %></td>
+                <td><%- students[i].Book %></td>
+            </tr>
+            <% } %>
+
+
+
+        <% }else{ %>
+
+            <h1>STUDENTS DATA NOT FOUND !</h1>
+
+            <% } %>
+
+    </table>
+    
+    
+</body>
+</html>
+<style>
+    *{
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp54d0coA3sceyJQToYGsDdJ58ROL3iPAkzA&s");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        color: white;
+    }
+</style>
